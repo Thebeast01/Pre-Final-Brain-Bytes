@@ -1,0 +1,22 @@
+/* CSS for preloader */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fafeb6; /* Initial background color */
+	z-index: 9999;
+	opacity: 1;
+	transition: opacity 0.9s;
+  }
+  
+  /* Animation keyframes for color changes */
+  @keyframes colorChange {
+	0% {
+	  background-color: #eff461; /* Initial background color */
+	}
+;
+	
+  }
+  

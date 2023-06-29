@@ -37,9 +37,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/review.css" /> -->
+    <link rel="stylesheet" href="1.css">
+   <!-- <script src="PRELOADER.js"></script> -->
 </head>
 
-<body style="background-color: whitesmoke">
+
+<!-- 
+ <body style="background-color: whitesmoke"> -->
+  <body  style="background-color:whitesmoke ;">
+    <div class="preloader"></div>
+
+    <script>
+      // JavaScript for preloader
+window.addEventListener('load', function() {
+  var preloader = document.querySelector('.preloader');
+
+  // Apply color change animation
+  // preloader.style.animation = 'colorChange 2s infinite';
+
+  // Hide preloader after specified time
+  setTimeout(function() {
+    preloader.style.opacity = 0;
+    setTimeout(function() {
+      preloader.style.display = 'none';
+    }, 500);
+  }, 200);
+});
+
+    </script>
+       
+
+
+
+
+  
   <nav class="navbar">
     <div class="main">
       <div class="logo"></div>
@@ -51,7 +82,7 @@
           <a href="#" id="e-material">E-Materials <ion-icon name="chevron-down-outline"></ion-icon></a>
           <div class="drop_down_menu">
             <ul>
-              <li><a href="#">E-Notes</a></li>
+              <li><a href="Notes/notes.html">E-Notes</a></li>
               <li><a href="#">Question Bank</a></li>
               <li><a href="#">Quiz</a></li>
               <li><a href="#">Tests</a></li>
@@ -71,7 +102,7 @@
             </ul>
           </div>
         </li>
-        <li><a href="# " id="blog">Blog</a></li>
+        <li><a href="blog.html" id="blog">Blog</a></li>
         <li><a href="Doubt Page/doubt.html" id="doubt">Doubts</a></li>
         <li>
           <a href="About Us/About-Us.html" id="about-us">About Us</a>
@@ -95,7 +126,7 @@
           <a href="#" id="e-material-items">E-Materials <ion-icon name="chevron-down-outline"></ion-icon></a>
           <div id="drop-down-0">
             <ul>
-              <li><a href="#">E-Notes</a></li>
+              <li><a href="Notes/notes.html">E-Notes</a></li>
               <li><a href="#">Question Bank</a></li>
               <li><a href="#">Quiz</a></li>
               <li><a href="#">Tests</a></li>
@@ -106,15 +137,15 @@
           <a href="#" id="courses-content">Courses <ion-icon name="chevron-down-outline"></ion-icon></a>
           <div class="drop_down_menu" id="drop-down-1">
             <ul>
-              <li><a href="#">Class 9</a></li>
-              <li><a href="#">Class 10</a></li>
+              <li><a href="Courses/class9.html">Class 9</a></li>
+              <li><a href="Courses/class10.html">Class 10</a></li>
               <li><a href="#">Olympiad</a></li>
               <li><a href="#">NTSE</a></li>
             </ul>
           </div>
         </li>
 
-        <li><a href="#">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="Doubt Page/doubt.html">Doubts</a></li>
         <li><a href="About Us/About-Us.html">About Us</a></li>
       </ul>
@@ -124,33 +155,78 @@
         <input type="text" placeholder="Search.." class="search-bar" />
         <button><ion-icon name="search-outline"></ion-icon></button>
       </div> -->
-    <button class="btn-0">Login&nbsp;/&nbsp;Register</button>
-  </nav>
-  <!-- Login popup  -->
-  <!--   <div class="center">
-      <input type="checkbox" id="show">
-      <label for="show" class="show-btn">Login/Sign-Up</label>
-      <div class="container">
-          <label for="show" class="close-btn fas fa-times"></label>
-          <div class="text">Login</div>
-          <form action="#">
-              <div class="data">                    
-                  <label>Email or Phone</label>
-                  <input type="text" required>                    
-              </div>
-              <div class="data">                    
-                  <label>Password</label>
-                  <input type="password" required>                    
-              </div>
-              <div class="forgot-pass"><a href="#">Forgot Password</a></div>
-              <div class="btn">
-                  <div class="inner"></div>
-                  <button type="submit">Login</button>
-              </div>
-              <div class="signup-link">Dont't have an account?<a href="#">Sign-Up</a></div>
-          </form>
+      <section>
+        <div class="rt-container">
+              <div class="col-rt-12">
+                  <div class="Scriptcontent">
+                  
+            <!-- Login Form Popup HTML -->
+                      <center>
+    <label class="modal-btn" for="modal-toggle">Login/Signup</label>  
+                      </center>
+        <input id="modal-toggle" type="checkbox">
+        <label class="modal-backdrop" for="modal-toggle"></label>
+        <div class="modal-content">
+            <label class="modal-close-btn" for="modal-toggle">
+              <svg width="30" height="30">
+                <line x1="5" y1="5" x2="20" y2="20"/>
+                <line x1="20" y1="5" x2="5" y2="20"/>
+              </svg>
+            </label>
+            <div class="tabs">
+    <!--  LOG IN  -->
+                <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+                <label for="tab-1" class="table"><span>Login</span></label>
+                <div class="tabs-content">
+                   <div class="login_socnet">
+                       <a href="" class="fa fa-vk" aria-hidden="true"></a>
+                       <a href="" class="fa fa-google-plus" aria-hidden="true"></a>
+                       <a href="" class="fa fa-facebook" aria-hidden="true"></a>
+                   </div>
+                   <form action="">
+                       <input type="email" placeholder="Email" required>
+                       <input type="password" placeholder="Password" required>
+                       <input type="submit" value="Log In">
+                   </form>
+                   <form class="forgot-password" action="">
+                       <input id="forgot-password-toggle" type="checkbox">
+                       <label for="forgot-password-toggle">forgot password?</label>
+                       <div class="forgot-password-content">
+                           <input type="email" placeholder="enter your email" required>
+                           <input type="submit" value="go">
+                       </div>
+                   </form>
+                </div>
+    <!--  SIGN UP  -->
+                <input class="radio" id="tab-2" name="tabs-name" type="radio">
+                <label for="tab-2" class="table"><span>Sign up</span></label>
+                <div class="tabs-content">
+                    <div class="login_socnet">
+                       <a href="" class="fa fa-vk" aria-hidden="true"></a>
+                       <a href="" class="fa fa-google-plus" aria-hidden="true"></a>
+                       <a href="" class="fa fa-facebook" aria-hidden="true"></a>
+                   </div>
+                   <form action="">
+                       <input type="email" placeholder="Email" required>
+                       <input type="password" placeholder="Password" required>
+                       <input type="password" placeholder="Confirm password" required>
+                       <input type="submit" value="Sign Up">
+                   </form>
+                </div>
+            </div>
+        </div>
+    <!-- partial -->
+    
+            
+               
+            </div>
+        </div>
       </div>
-  </div> -->
+      </section>
+  </nav>
+  
+    
+
 
   <!-- Slider starts here -->
 
@@ -494,10 +570,10 @@
               </div>
 
 
-              <div class="course-duration">
+              <!-- <div class="course-duration">
                 <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -518,10 +594,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
+              <!-- <div class="course-duration">
                 <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -542,10 +618,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
+              <!-- <div class="course-duration">
                 <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -566,10 +642,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
-                <i class="far fa-clock"></i>
+              <!-- <div class="course-duration"> -->
+                <!-- <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -590,10 +666,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
-                <i class="far fa-clock"></i>
+              <!-- <div class="course-duration"> -->
+                <!-- <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -614,10 +690,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
+              <!-- <div class="course-duration">
                 <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -638,10 +714,10 @@
                 <span>4.3</span>
               </div>
 
-              <div class="course-duration">
-                <i class="far fa-clock"></i>
+              <!-- <div class="course-duration"> -->
+                <!-- <i class="far fa-clock"></i>
                 01:20hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -662,10 +738,10 @@
                 <span>4.5</span>
               </div>
 
-              <div class="course-duration">
-                <i class="far fa-clock"></i>
+              <!-- <div class="course-duration"> -->
+                <!-- <i class="far fa-clock"></i>
                 01:30hr
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -684,6 +760,7 @@
     <!-- <p style="color: black; padding-bottom: 80px; font-size: 40px; font-weight: 500px;">Testimonial: What Students Says</p> -->
     <i id="left" class="fa-solid fa-angle-left"></i>
     <ul class="carousel">
+      <!-- <p style="color: black;">Write Review</p> -->
       <li class="card">
         <div class="img"><img src="Images/img-1.jpg" alt="img" draggable="false"></div>
         <h2>Blanche Pearson</h2>
@@ -816,8 +893,8 @@
         <div class="footer-col">
           <h4>COMPANY</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About Us/About-Us.html">About Us</a></li>
             <li><a href="#">Blogs</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Contact</a></li>
@@ -827,15 +904,16 @@
           <h4>Help and Support</h4>
           <ul>
             <li><a href="#">User Guidelines</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">FAQ's</a></li>
+            <li><a href="FeedBack Form/Feedback.html">Feedback</a></li>
+            <li><a href="Doubt Page/doubt.html">FAQ's</a></li>
+            <li><a href="FeedBack Form/Feedback.html">Write Review</a></li>
             <li><a href="#"> Terms and conditions</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>follow us</h4>
           <div class="social-links">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -857,11 +935,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
- <!--  <script>
-    $(document).ready(function () {
-      $(".carousel").carousel();
-    });
-  </script> -->
+ 
+</div>
+
 
 </body>
 
