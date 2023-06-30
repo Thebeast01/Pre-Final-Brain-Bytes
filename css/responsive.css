@@ -49,6 +49,9 @@
   .hamburger_menu {
     display: flex;
   }
+  #course-cards {
+    margin-left: 60px;
+  }
 
   /* .hidden {
     display: none;
