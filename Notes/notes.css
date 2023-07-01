@@ -1,61 +1,296 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.notes-container {
+  width: 100%;
+  margin-bottom: 8rem;
+}
 .class-boxes {
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
 }
 
 .class {
-    margin: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #ffc400;
-    box-shadow: 0.3rem 0.3rem 0.5rem #52514844;
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffc400;
+  height: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem #00000098;
+  display: flex;
+  align-items: center;
 }
 
 .notes-heading {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: rgb(53, 50, 39);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: rgb(53, 50, 39);
 }
 
 .notes-list {
-    list-style: none;
-    text-align: left;
-    margin-left: 20px;
-
+  list-style: none;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .notes-list li a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .class-heading {
-    padding-left: 30px;
+  padding-left: 30px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
 }
-
+.class-heading:hover {
+  text-decoration: underline;
+}
 .notes-list li a:hover {
-    color: #ffc700;
+  color: #ffc700;
 }
 
 .notes-list li {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
-@media (min-width:600px) {
-    .class-boxes {
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 600px) {
+  .class-boxes {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (min-width:1080px) {
-    .class-boxes {
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (min-width: 1080px) {
+  .class-boxes {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Navbar Css  */
+
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center; /* 
+    justify-content: center; */
+  gap: 5rem;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0.6rem;
+  align-items: center;
+  height: 6.3rem;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.575);
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-image: url(/Images/logo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar .Navigation-items {
+  display: flex;
+  list-style: none;
+  width: 65%;
+  gap: 2rem;
+  position: relative;
+  right: 3rem;
+}
+#e-material {
+  width: 8rem;
+}
+#about-us {
+  width: 7rem;
+}
+.navbar li a {
+  color: black;
+  padding: 0 0.7rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.navbar li a:hover {
+  background-color: yellow;
+}
+.navbar li a:active,
+.navbar li a:focus {
+  text-decoration: underline;
+}
+.drop_down_menu {
+  display: none;
+}
+
+.navbar li:hover .drop_down_menu {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(36, 35, 35);
+  width: 12rem;
+  z-index: 1;
+}
+
+.navbar li:hover .drop_down_menu ul {
+  display: flex;
+
+  /* 
+    justify-content: center; */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.navbar li:hover .drop_down_menu ul li {
+  /* width: 100%; */
+
+  margin-bottom: 0.5rem;
+}
+.drop_down_menu ul li a:hover,
+.drop_down_menu ul li a:focus {
+  text-decoration: underline;
+}
+.drop_down_menu ul li a {
+  border-radius: 2rem;
+  width: fit-content;
+}
+
+/* Hamburger Menu css  */
+.hamburger_menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger {
+  color: black;
+  font-size: 2rem;
+  margin-left: 3rem;
+  height: fit-content;
+  margin-right: 5rem;
+}
+#secondary_nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 25rem;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8rem;
+  left: -95px;
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(36, 35, 35);
+  z-index: 1;
+}
+#menu-2 {
+  z-index: 1;
+}
+.logo_1 {
+  background-image: url(/Images/brain\ bytes\ logo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#drop-down-0 {
+  display: none;
+}
+#drop-down-1 {
+  display: none;
+}
+.navbar li:hover #drop-down-0 {
+  display: flex;
+  flex-direction: column;
+  left: 11rem;
+  top: 4rem;
+  width: 12rem;
+  border-top-right-radius: 0.5rem;
+  position: absolute;
+  background-color: #fff;
+  backdrop-filter: blur(20px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(36, 35, 35);
+  z-index: 1;
+}
+.navbar li:hover #drop-down-0 ul {
+  display: flex;
+  flex-direction: column;
+}
+.navbar li:hover #drop-down-1 {
+  left: 11rem;
+  top: 7.5rem;
+  width: 12rem;
+  border-top-right-radius: 0.5rem;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgb(36, 35, 35);
+  z-index: -1;
+}
+.navbar li:hover #drop-down-1 ul {
+  display: flex;
+  flex-direction: column;
+}
+.btn-0 {
+  color: black;
+  background-color: #fff;
+  height: 2.5rem;
+  width: 10rem;
+  font-weight: 600;
+  border: 2px solid yellow;
+  outline: none;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.btn-0:hover {
+  background-color: yellow;
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
 }
